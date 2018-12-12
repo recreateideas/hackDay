@@ -4,15 +4,33 @@ console.log('index');
 
 
 (() => {
-    const getProduct = async () => {
+    const sendProduct = async () => {
         try {
-            const res = await axios.get(`http://localhost:5011`, { productName: 'item', productPrice: '$20.00' });
+            const res = await axios.post('http://localhost:5011/save', { productName: 'item', productPrice: '$20.00' });
+            console.log(res.data);
             return res.data;
         } catch (err) {
-            console.log('error');
+            console.log(err);
         }
     };
-    getProduct();
+
+    const findProducts = async () => {
+        try {
+            const res = await axios.get('http://localhost:5011/find', { productName: 'item', productPrice: '$20.00' });
+            console.log(res.data);
+            return res.data;
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    setTimeout(()=>{ 
+        sendProduct();
+    }, 3000);
+
+    setTimeout(()=>{ 
+        findProducts();
+    }, 3500);
 
 }
 
