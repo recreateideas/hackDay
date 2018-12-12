@@ -1,7 +1,7 @@
 {
   "name": "hack_day",
   "version": "1.0.0",
-  "description": "Sherry, Sheela & Claudio",
+  "description": "HaCk DaY 2018 - Sherry, Sheela & Claudio",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
