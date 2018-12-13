@@ -13,8 +13,12 @@
     "axios": "0.18.0",
     "body-parser": "1.18.3",
     "concurrently": "3.5.0",
-    "mongodb": "3.0.10"
+    "mongodb": "3.0.10",
+    "mongodb-query-parser": "1.2.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }

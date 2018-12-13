@@ -8,7 +8,7 @@ module.exports = {
 
     connectToDB: (callback) => {
         try {
-            _dbName = 'test';
+            _dbName = 'hackday';
             _hostName = 'localhost';
             _mongoPort = '27017';
             _remoteMongoInstance = 'mongodb';
