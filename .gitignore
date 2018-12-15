@@ -3,8 +3,8 @@
 
 /node_modules
 
+/builds_and_tests
+
 package-lock.json
 
-store_ONSITECOMPdev.js
 
-test_exitcapture_1.js
