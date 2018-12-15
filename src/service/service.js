@@ -1,6 +1,7 @@
 const express =require('express');
 const bodyParser = require('body-parser');
 var cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 
@@ -10,7 +11,8 @@ app.use(cors());
 
 require('./routes')(app);
 
-// app.use(errors());
-app.listen('5011');
+const port = process.env.REMOTE_PORT || 5011;
 
-console.log(`Listening on localhost, port: 5011`);
+app.listen(port);
+
+console.log(`-> Server Listening on ${process.env.REMOTE_HOST} port: ${port}\n`);

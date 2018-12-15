@@ -8,10 +8,10 @@ module.exports = {
 
     connectToDB: (callback) => {
         try {
-            _dbName = 'hackday';
-            _hostName = 'localhost';
-            _mongoPort = '27017';
-            _remoteMongoInstance = 'mongodb';
+            _dbName = process.env.DB_NAME;
+            _hostName = process.env.DB_HOST_NAME;
+            _mongoPort = process.env.DB_PORT;
+            _remoteMongoInstance = process.env.DB_MONGO_INSTANCE;
             const mongoUrl = `${_remoteMongoInstance}://${_hostName}:${_mongoPort}/${_dbName}`;
             const options = {
                 auto_reconnect: false,
